@@ -1,0 +1,204 @@
+/*
+ * HMTL 5 APP, lunchify
+ * Created by C2 Interactive
+ * Author C2 Interactive
+ *
+ * http://www.c2.se
+ */
+ 
+	hgroup {
+	 	width: 100%;
+		max-width: 640px;
+		min-width: 320px;
+		text-align: center;
+	 }
+
+	h1, h2, h3 {
+		font-family: 'Cookie', cursive;
+	}
+
+	h1 {
+		font-size: 44px;
+		line-height: 66px;
+		text-shadow: 1px 1px 1px #000;
+	}
+
+	h2, h3 {
+		text-shadow: 1px 1px 1px #000;
+		font-family: Arial, sans-serif;
+	}
+
+	/* Links */
+
+	a.fetch:link { 
+		width: 100%;
+		max-width: 600px;
+		height: 131px;
+		border: none;
+		display: block;
+		background: url('../images/startbtn.png') no-repeat;
+		background-position: 0 -131px;
+		text-indent: -9999px;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	a.fetch:hover { 
+		background-position: 0 -1px;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);	
+	}
+
+	/*
+	 * Override jQuery standard elements
+	 * Because the standard UI looks like shit
+	 */
+
+	.ui-loader { display: none; }
+
+	/* 
+	 * Layout 
+	 *
+	 */
+
+	* {
+		margin: 0;
+		padding: 0; 
+		border: none;
+		outline: none;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+
+	body {
+		color: rgba(255, 255, 255, 1);
+		font-family: 'Arial', 'Helvetica', sans-serif;
+	}
+
+	#lunchify {
+		width: 100%;
+		max-width: 640px;
+		min-width: 320px;
+		height: 100%;
+		max-height: 960px;
+		min-height: 920px;
+		margin: 0 auto;
+		background: url('../images/background.png') top center no-repeat;
+		position: relative;
+	}
+
+		#lunchify header {
+			width: 100%;
+			max-width: 640px;
+			min-width: 320px;
+			height: 86px;
+			background: url('../images/header.png') top center no-repeat;
+			z-index: 2002;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+			#lunchify header hgroup { height: 86px;	}
+
+	#lunchify-me {
+		width: 100%;
+		max-width: 600px;
+		height: 155px;
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+		top: 423px;
+		font-weight: 700;
+		font-size: 16px;
+	}
+	
+	#slide {
+		height: 560px;
+		max-height: 560px;
+		width: 100%;
+		max-width: 640px;
+		min-height: 320px;
+		position: absolute;
+		top: 86px;
+	}	
+
+		#settings {
+			width: 100%;
+			max-width: 640px;
+			min-width: 320px;
+			height: 560px;
+			position: absolute;
+			z-index: 1001;
+			background: url('../images/dropdown.png') top center no-repeat;
+			top: -466px;
+		}
+
+			#settings hgroup {
+				margin-top: 20px;
+				font-size: 28px;
+				line-height: 70px;
+			}
+
+
+				#choices article {
+					width: 100%;
+					max-width: 640px;
+					height: 80px;
+					border-bottom: 1px solid #000000;
+	    			border-top: 1px solid rgba(255, 255, 255, 0.1);
+					position: relative;
+					z-index: 2002;
+				}
+
+				#choices article:last-child {
+					border-bottom: none;
+				}
+
+					#choices article hgroup {
+						width: 220px;
+						min-width: 180px;
+						max-width: 220px;
+						margin: 0;
+						padding: 0 0 0 10px;
+						float: left;
+						font-size: 22px;
+						text-align: left;
+						line-height: 80px;
+					}
+
+					#choices article .ui-checkbox {
+						width: 140px;
+						height: 70px;
+						float: left;
+						position: absolute;
+						top: 6px;
+						right: 10px;
+					}
+						#choices article .ui-icon-checkbox-on {
+							width: 140px;
+							height: 69px;	
+							border: none;
+							display: block;
+							background: url('../images/onoff.png')no-repeat;
+							background-position: 0 -69px!important;
+							z-index: 1002;
+							position: absolute;
+						}
+
+						#choices article input[type=checkbox] {
+							position: absolute;
+							top: 20px;
+							left: 20px;
+							z-index: 1001;
+						}
+
+						#choices article .ui-checkbox label span .ui-btn-text { display: none; }
+
+						#choices article .ui-icon-checkbox-off {
+							width: 140px;
+							height: 69px;	
+							border: none;
+							display: block;
+							background: url('../images/onoff.png')no-repeat;
+							background-position: 0 0px!important;
+							z-index: 1002;
+							position: absolute;
+						}
